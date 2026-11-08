@@ -1,0 +1,16 @@
+# Claude's LiveKit dev server for the blackjack voice demo.
+# Ports 798x (not 7880) so nothing that reads ~/portal-makermods/.env can reach it.
+# Reach it from a laptop through an SSH tunnel: -L 7980 (signaling) and -L 7981 (ICE over TCP).
+port: 7980
+bind_addresses:
+  - 127.0.0.1
+rtc:
+  tcp_port: 7981
+  udp_port: 7982
+  node_ip: 127.0.0.1
+  use_external_ip: false
+  enable_loopback_candidate: true
+keys:
+  devkey: secret
+logging:
+  level: info

@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+*.log
+*.bak-*
+.env
+.env.*
+backups/
+diagnostics/
+*.tmp
+.pytest_cache/
+.venv/
+venv/

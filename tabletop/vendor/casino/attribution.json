@@ -1,0 +1,102 @@
+{
+  "provider": "Poly Haven",
+  "license": "CC0-1.0",
+  "license_url": "https://polyhaven.com/license",
+  "retrieved": "2026-11-08",
+  "assets": [
+    {
+      "id": "polar_fleece",
+      "source": "https://polyhaven.com/a/polar_fleece",
+      "authors": {
+        "colormass": "Photography",
+        "Rico Cilliers": "Processing"
+      },
+      "description": "Free 8K texture, cream-beige polar fleece with soft, napped, fluffy surface; plush, gauzy woven look ideal for cozy blankets, garments and interior fabrics.",
+      "maps": [
+        {
+          "channel": "Diffuse",
+          "file": "polar_fleece_diff_1k.jpg",
+          "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/polar_fleece/polar_fleece_diff_1k.jpg",
+          "bytes": 673341,
+          "sha256": "d3053dad0f9ea77c347a92ddd675d5d138bcace6f57e49beb4aedbd972381ea9",
+          "provider_md5": "92d8dbc261c2ff09bb028a68bb7ad01b",
+          "resolution_label": "1k"
+        },
+        {
+          "channel": "nor_gl",
+          "file": "polar_fleece_nor_gl_1k.jpg",
+          "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/polar_fleece/polar_fleece_nor_gl_1k.jpg",
+          "bytes": 538860,
+          "sha256": "2c698788b2586445419a5473404abfac2c8778001b7164e399e6ab17772f5558",
+          "provider_md5": "f821b0ba283a45258f144182016328dd",
+          "resolution_label": "1k"
+        },
+        {
+          "channel": "Rough",
+          "file": "polar_fleece_rough_1k.jpg",
+          "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/polar_fleece/polar_fleece_rough_1k.jpg",
+          "bytes": 991619,
+          "sha256": "5693b1956ae4ccfce64720a846091d61973cb7a10a2396b50fa4168cc2b0bc3c",
+          "provider_md5": "1922fd67082de2f465a4ad8442cc714d",
+          "resolution_label": "1k"
+        }
+      ]
+    },
+    {
+      "id": "leather_white",
+      "source": "https://polyhaven.com/a/leather_white",
+      "authors": {
+        "Rob Tuytel": "All"
+      },
+      "description": "Free 8K leather texture: smooth, even white animal-hide upholstery material with fine grain, subtle matte sheen and clean, new finish.",
+      "maps": [
+        {
+          "channel": "Diffuse",
+          "file": "leather_white_diff_1k.jpg",
+          "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/leather_white/leather_white_diff_1k.jpg",
+          "bytes": 728363,
+          "sha256": "4d916dfe89c9d2b88bf52e0c70c6a9798a5c29c8c2fcb6ba1ab7b7ded9ef3ed5",
+          "provider_md5": "a580e1c45d806a56d89331f9a549ecb2",
+          "resolution_label": "1k"
+        },
+        {
+          "channel": "nor_gl",
+          "file": "leather_white_nor_gl_1k.jpg",
+          "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/leather_white/leather_white_nor_gl_1k.jpg",
+          "bytes": 670610,
+          "sha256": "51bdac4b76da70dc54c288cffea4ecaf837ebb6ed9264664bf5c9a1fc79aa074",
+          "provider_md5": "4226eb91e17693722f3368cd41a3b1c9",
+          "resolution_label": "1k"
+        },
+        {
+          "channel": "Rough",
+          "file": "leather_white_rough_1k.jpg",
+          "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/leather_white/leather_white_rough_1k.jpg",
+          "bytes": 675426,
+          "sha256": "dbae1aeb5f9a2a46f7fe758f38811beb6a109021848462032d9a3cd63f187a66",
+          "provider_md5": "db1052bac557bb6b03fdde325a853af4",
+          "resolution_label": "1k"
+        }
+      ]
+    },
+    {
+      "id": "studio_small_09",
+      "source": "https://polyhaven.com/a/studio_small_09",
+      "authors": {
+        "Sergej Majboroda": "All"
+      },
+      "description": "Unclipped, free 16K HDRI: small studio with large octaboxes casting soft directional artificial light on a white infinity cyc; medium contrast, neutral tones.",
+      "maps": [
+        {
+          "channel": "hdri",
+          "file": "studio_small_09_1k.hdr",
+          "source": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/1k/studio_small_09_1k.hdr",
+          "bytes": 1615248,
+          "sha256": "e7cfda5f4e98e623db12b8bfd0184e048488e4855d9c83e2751fb44a32e80c45",
+          "provider_md5": "d5d7eb9d26d341d6aa4d11c1a54fd97c",
+          "resolution_label": "1k"
+        }
+      ]
+    }
+  ]
+}

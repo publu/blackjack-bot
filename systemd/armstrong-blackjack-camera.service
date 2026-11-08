@@ -1,0 +1,15 @@
+[Unit]
+Description=Armstrong blackjack read-only card reader
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=%h/armstrong
+ExecStart=%h/.cache/armstrong-blackjack-runtime/bin/python %h/armstrong/tools/blackjack/camera_feed.py --host 0.0.0.0 --port 8204
+Environment=PYTHONUNBUFFERED=1
+Environment=PATH=%h/.local/bin:/usr/local/bin:/usr/bin:/bin
+Restart=on-failure
+RestartSec=3
+
+[Install]
+WantedBy=default.target

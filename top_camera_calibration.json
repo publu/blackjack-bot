@@ -1,0 +1,31 @@
+{
+ "T_table_camera": [
+  [
+   0.994005,
+   -0.106391,
+   0.025194,
+   -0.424767
+  ],
+  [
+   -0.10918,
+   -0.953702,
+   0.280235,
+   -0.035582
+  ],
+  [
+   -0.005787,
+   -0.281306,
+   -0.959601,
+   0.819468
+  ],
+  [
+   0.0,
+   0.0,
+   0.0,
+   1.0
+  ]
+ ],
+ "source": "2026-11-08 Halo TOP D435i: table plane from aligned depth (RANSAC) + yaw/translation from left/right gripper jaw tips vs FK (ee_mm + 53 mm along tool z), frame 155185",
+ "accuracy": "about +/-15 mm in the table plane; display only",
+ "note": "p_table = T @ [p_camera,1] (metres, table frame = RIGHT arm base, +Z up). Never a motion target."
+}

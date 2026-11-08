@@ -1,0 +1,17 @@
+{
+  "sources": [
+    {
+      "path": "/home/pablo/Documents/Codex/2026-10-23/set-x20/outputs/dreamlab/halo/dreamapi/ui/robot-model.json",
+      "sha256": "8d9e065c29da749bde628e3f1613282909cf25f23863a492126a82763c0bb3e0"
+    },
+    {
+      "path": "/home/pablo/Documents/Codex/2026-10-23/set-x20/outputs/dreamlab/halo/dreamapi/models/yam_linear_4310.xml",
+      "sha256": "4f22f7df9f6595dad1acdbd2f4fb2ba2d5a85a53797be196333c45c0c7a2f340"
+    },
+    {
+      "path": "/home/pablo/Documents/Codex/2026-10-23/set-x20/outputs/dreamlab/.venv/lib/python3.12/site-packages/i2rt/robot_models/arm/yam/yam.urdf",
+      "sha256": "05ceb85f62805b8da89a2a6829755d9743778e8375c47535c90370f18fca4713"
+    }
+  ],
+  "note": "Read-only URDF representation of the exact station-composed YAM + linear_4310 mesh/FK tree; original bare-arm URDF retained. Render limits are not motion limits. Rig translation remains nominal."
+}

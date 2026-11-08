@@ -1,0 +1,2 @@
+# Install only in the blackjack runtime; never modify the station environment.
+opencv-python-headless==5.0.0.93

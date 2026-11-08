@@ -1,0 +1,136 @@
+<robot name="station_yam_linear_4310">
+  <link name="world">
+    <visual>
+      <origin xyz="0.00024664703203125526 3.4166796510630426e-05 0.0214107436764375" rpy="1.5693655417343297 -0.01731569411699247 0.0004305937821307882" />
+      <geometry>
+        <mesh filename="station-mesh:0" />
+      </geometry>
+    </visual>
+  </link>
+  <link name="link1">
+    <visual>
+      <origin xyz="-0.004020942724060658 0.009978461712742043 0.029238982135647587" rpy="1.4804030227383997 -0.6095404075799767 -1.5665375879524877" />
+      <geometry>
+        <mesh filename="station-mesh:1" />
+      </geometry>
+    </visual>
+  </link>
+  <joint name="joint1" type="revolute">
+    <parent link="world" />
+    <child link="link1" />
+    <origin xyz="0.0 0.0 0.067" rpy="0.0 0.0 -1.5708005694372709" />
+    <axis xyz="0.0 0.0 1.0" />
+    <limit lower="-6.283185307" upper="6.283185307" effort="0" velocity="0" />
+  </joint>
+  <link name="link2">
+    <visual>
+      <origin xyz="0.13831193939678718 9.81695618440942e-05 -0.032451805594287134" rpy="1.5699279103167068 -5.3651688643279206e-05 1.570751043784095" />
+      <geometry>
+        <mesh filename="station-mesh:2" />
+      </geometry>
+    </visual>
+  </link>
+  <joint name="joint2" type="revolute">
+    <parent link="link1" />
+    <child link="link2" />
+    <origin xyz="-0.0329 0.02 0.0455" rpy="1.5708003267948967 8.000045070843953e-12 -1.5708003267948967" />
+    <axis xyz="0.0 0.0 1.0" />
+    <limit lower="-6.283185307" upper="6.283185307" effort="0" velocity="0" />
+  </joint>
+  <link name="link3">
+    <visual>
+      <origin xyz="0.05034064027981905 -0.09693435511781054 -0.034759478853868694" rpy="1.572275428399122 -0.04589688102301899 -3.027997800505217" />
+      <geometry>
+        <mesh filename="station-mesh:3" />
+      </geometry>
+    </visual>
+  </link>
+  <joint name="joint3" type="revolute">
+    <parent link="link2" />
+    <child link="link3" />
+    <origin xyz="0.264 4.08431e-07 -0.06375" rpy="-3.1415899999994217 -1.3864751024196895e-12 1.5708005694372709" />
+    <axis xyz="0.0 0.0 1.0" />
+    <limit lower="-6.283185307" upper="6.283185307" effort="0" velocity="0" />
+  </joint>
+  <link name="link4">
+    <visual>
+      <origin xyz="-0.03963643925060336 0.0451709142206569 -0.035496918235710426" rpy="-1.6841776544488045 -0.03331363763868278 -2.2498793991486514" />
+      <geometry>
+        <mesh filename="station-mesh:4" />
+      </geometry>
+    </visual>
+  </link>
+  <joint name="joint4" type="revolute">
+    <parent link="link3" />
+    <child link="link4" />
+    <origin xyz="0.0600003 -0.244999 -0.00205" rpy="0.0 0.0 -3.1415900000097934" />
+    <axis xyz="0.0 0.0 1.0" />
+    <limit lower="-6.283185307" upper="6.283185307" effort="0" velocity="0" />
+  </joint>
+  <link name="link5">
+    <visual>
+      <origin xyz="-6.811242387027433e-05 -0.006226714403762084 0.03359565100712969" rpy="0.5070554680650977 -0.0014547620509032541 -0.014683566106757277" />
+      <geometry>
+        <mesh filename="station-mesh:5" />
+      </geometry>
+    </visual>
+  </link>
+  <joint name="joint5" type="revolute">
+    <parent link="link4" />
+    <child link="link5" />
+    <origin xyz="-0.0403003 0.0703851 -0.0323887" rpy="2.32679518585837e-06 -1.5707920841749685 -3.1415923267946075" />
+    <axis xyz="0.0 0.0 1.0" />
+    <limit lower="-6.283185307" upper="6.283185307" effort="0" velocity="0" />
+  </joint>
+  <link name="link6" />
+  <joint name="joint6" type="revolute">
+    <parent link="link5" />
+    <child link="link6" />
+    <origin xyz="2.39858e-07 -0.0419481 0.0404996" rpy="1.57079432683914 -1.5707923268391404 3.1415906535785254" />
+    <axis xyz="0.0 0.0 -1.0" />
+    <limit lower="-6.283185307" upper="6.283185307" effort="0" velocity="0" />
+  </joint>
+  <link name="gripper">
+    <visual>
+      <origin xyz="-4.664103389585145e-05 0.0003088045939724435 -0.03236364552046474" rpy="1.6317606438524093 -0.02424748566751603 0.0025783357501038217" />
+      <geometry>
+        <mesh filename="station-mesh:6" />
+      </geometry>
+    </visual>
+  </link>
+  <joint name="fixed_gripper" type="fixed">
+    <parent link="link6" />
+    <child link="gripper" />
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+  </joint>
+  <link name="tip_left">
+    <visual>
+      <origin xyz="-0.02420399206330026 0.015627533356444748 -0.040963302439655715" rpy="0.7804070285565782 -0.6633248383210014 1.5208847039486217" />
+      <geometry>
+        <mesh filename="station-mesh:7" />
+      </geometry>
+    </visual>
+  </link>
+  <joint name="joint7" type="prismatic">
+    <parent link="gripper" />
+    <child link="tip_left" />
+    <origin xyz="-0.0238981 0.0450619 -0.0545599" rpy="1.57079432683914 -1.5707923268391404 3.1415906535785254" />
+    <axis xyz="0.0 0.0 -1.0" />
+    <limit lower="0" upper=".0475" effort="0" velocity="0" />
+  </joint>
+  <link name="tip_right">
+    <visual>
+      <origin xyz="-0.015589810567352952 -0.024223603456508508 -0.04091034588105491" rpy="-0.7853182782589396 0.6607882153048168 -0.05368750452710479" />
+      <geometry>
+        <mesh filename="station-mesh:8" />
+      </geometry>
+    </visual>
+  </link>
+  <joint name="joint8" type="prismatic">
+    <parent link="gripper" />
+    <child link="tip_right" />
+    <origin xyz="0.0238981 -0.0450619 -0.0545599" rpy="1.5708005694372709 0.0 0.0" />
+    <axis xyz="0.0 0.0 -1.0" />
+    <limit lower="0" upper=".0475" effort="0" velocity="0" />
+  </joint>
+</robot>

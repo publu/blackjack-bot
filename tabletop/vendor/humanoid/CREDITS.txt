@@ -1,0 +1,5 @@
+Humanoid robot standing — Innerscene, original generic design, CC0.
+https://www.innerscene.com/tools/library/3d-parts/humanoid-robot-standing-f4186ca5
+Downloaded November 8, 2026. No Tesla names, logos or shell copied.
+Display geometry only; no claim of working mechanics. Adapted for blackjack:
+upper-body extraction, articulated shoulder/elbow/hand retargeting, surface tuning.

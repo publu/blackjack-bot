@@ -1,0 +1,19 @@
+:root{color-scheme:light;--bg:#f7f5ef;--text:#252c29;--muted:#687069;--line:#d5d8cf;--gold:#80714d}
+header{height:64px;margin:0 3vw;border-color:#dce0d7}main{max-width:1800px;padding:0 3vw}.topline{height:90px}
+#stage{height:calc(100svh - 330px);min-height:440px;max-height:900px}
+.micro,.wordmark span,.quiet,.house-rules,.house-rules span,.shoe-info,.hand-label>span,.accessible-cards,.pose-status,.scene-note,.scene-note span,.footnote,.faint{color:#626c64}
+.micro{font-size:10px}.wordmark{font-size:13px}.wordmark span{font-size:10px}.house-rules{font-size:11px}.house-rules span{font-size:11px}
+#bankroll{font-size:32px}.shoe-info{font-size:16px}.hand-label strong{color:#283a30;font-size:17px}.accessible-cards{font-size:13px}
+.control-zone{border-color:#dde0d7;padding-top:14px}.controls{gap:20px}.bet-control{background:#fffdf8}.bet-control input{color:#26362c;font-size:16px}.bet-control label{color:#5c675c;font-size:10px}
+#message{color:#344438;font-size:23px;height:auto;min-height:34px}.decision-controls button{font-size:14px;padding:14px 26px;background:#fffdf8}.decision-controls button:not(:disabled):hover{background:#e8ece2;border-color:#909c88}
+.deal{background:#344d3c;color:#fffdf5;font-size:14px}.deal:hover:not(:disabled){background:#49654e}
+.chips button{background:#ecefe5;color:#4a5a45;border-color:#87927c;outline-color:#d5dacd;font-size:11px;width:32px;height:32px}.chips button.selected{background:#dce3d1;color:#34462b;border-color:#74805d;outline-color:#a0ac8d}
+.footnote{font-size:9px;border-color:#dde0d7}.camera-mode .control-zone .controls{opacity:.7}button:disabled{opacity:.4}
+#empty-invitation{color:#334633;text-shadow:0 2px 20px #fff}#empty-invitation span{color:#63705d}
+.view-nav button{background:#fffffff0;border-color:#d2d7ca;color:#5f6d59;font-size:12px;padding:8px 12px}.view-nav button[aria-pressed=true]{background:#e7ecdf;border-color:#8e9c7e;color:#34482e}.view-nav>span{color:#64705f;font-size:11px}
+.camera-readout{color:#3a5137;font-size:12px;background:#f7f5efcc;border-radius:5px;padding:4px 6px}.camera-source-toggle,.transfer-replay{color:#71613b;border-color:#b1a786;font-size:12px}
+.observed-card-labels{color:#344d34;font-size:15px}.observed-rank{font-size:16px;background:#fffef7f2;color:#273c27;border-color:#a9b39c;box-shadow:0 2px 9px #454d3920}
+.left-arm{color:#167c79}.right-arm{color:#8c5b1d}.arm-key{font-size:11px}.pose-status,.scene-note{font-size:10px}
+dialog{background:#fffdf7;color:#303f32;border-color:#cdd4c3;box-shadow:0 20px 100px #25302030}dialog::backdrop{background:#4c58494d}dialog h2{color:#2b3d2e}dialog p{color:#58654f;font-size:14px}.dialog-head button{color:#506146}dl div{border-color:#dce1d4}dd{color:#665a3d}.outline{border-color:#b4c0a7;color:#3c5033;font-size:13px}select,.card-input{background:#f3f5ec;color:#30432e;border-color:#bac6ad}.check{font-size:13px}.scan-markers span{background:#fffef5ed;color:#294022;border-color:#879b70}.scan-status{color:#354f2b}
+.camera-read-reason{position:absolute;bottom:55px;left:20%;right:20%;text-align:center;font-size:12px;color:#75603e;pointer-events:none}
+@media(max-width:800px){header{height:60px}.wordmark{font-size:10px}.wordmark span{font-size:8px}.topline{height:88px}.house-rules{font-size:8px}.house-rules span{font-size:9px}.micro{font-size:9px}#bankroll{font-size:27px}#stage{height:49svh;min-height:370px}.view-nav button{font-size:10px;padding:7px}.view-nav>span{font-size:9px}.camera-readout{font-size:9px}.camera-source-toggle,.transfer-replay{font-size:10px}.observed-card-labels{font-size:12px}.observed-rank{font-size:13px}.arm-key{font-size:9px}.pose-status{font-size:8px}.camera-read-reason{left:5%;right:5%;font-size:10px}.decision-controls button{font-size:13px;padding:13px 17px}.footnote{font-size:8px}#message{font-size:20px}}

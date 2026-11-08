@@ -1,0 +1,22 @@
+<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Blackjack voice</title>
+<style>html{color-scheme:dark;font:17px system-ui;background:#111410;color:#e5dfd2}body{max-width:520px;margin:10vh auto;padding:24px}h1{font:32px Georgia}button{padding:12px 18px;background:#d7ccb2;border:0;border-radius:5px;color:#151810;font-size:16px}p{line-height:1.6;color:#a6aa9c}#log{font:15px/1.5 system-ui;max-height:40vh;overflow:auto}#log div{padding:2px 0}#log b{color:#d7ccb2;font-weight:600}form{display:flex;gap:8px;margin-top:12px}input{flex:1;padding:10px;background:#1c201a;border:1px solid #3a3f35;border-radius:5px;color:inherit;font-size:16px}</style>
+<h1>A seat at the table.</h1><p>Say “bet twenty five”, “deal”, “hit”, “stand”, “double” or “split”. Voice controls the practice game only. Keep the <a href="http://localhost:8202/" target="_blank">table</a> open; it draws the practice cards.</p>
+<button id="join">Join voice</button><p id="status" role="status">Microphone access requires localhost or HTTPS.</p>
+<form id="typed" hidden><input id="say" placeholder="Or type a command: hit" autocomplete="off"><button>Send</button></form>
+<div id="log" aria-live="polite"></div>
+<script src="/sdk.js"></script><script>
+let room;const button=document.getElementById('join'),status=document.getElementById('status'),log=document.getElementById('log'),typed=document.getElementById('typed'),input=document.getElementById('say');
+let lastNote='';function note(who,text){if(!text||who+text===lastNote)return;lastNote=who+text;const d=document.createElement('div');d.innerHTML='<b></b> ';d.firstChild.textContent=who;d.append(text);log.prepend(d);}
+button.onclick=async()=>{button.disabled=true;try{if(room){await room.disconnect();room=null;typed.hidden=true;button.textContent='Join voice';status.textContent='Disconnected.';return;}
+const response=await fetch('/token',{method:'POST'});if(!response.ok)throw Error('Voice configuration unavailable.');const config=await response.json();
+room=new LivekitClient.Room({audioCaptureDefaults:{echoCancellation:true,noiseSuppression:true,autoGainControl:true}});
+room.on(LivekitClient.RoomEvent.TrackSubscribed,track=>{if(track.kind==='audio'){const audio=track.attach();document.body.append(audio);}});
+room.on(LivekitClient.RoomEvent.ParticipantConnected,p=>{if(p.identity.startsWith('agent'))status.textContent='Dealer is at the table. Speak naturally.';});
+room.on(LivekitClient.RoomEvent.Disconnected,()=>{status.textContent='Disconnected.';});
+if(room.registerTextStreamHandler)room.registerTextStreamHandler('lk.transcription',async(reader,info)=>{const text=await reader.readAll();note(info.identity===room.localParticipant.identity?'You':'Dealer',text);});
+await room.connect(`ws://${location.hostname}:${config.port}`,config.token);await room.startAudio();await room.localParticipant.setMicrophoneEnabled(true);
+button.textContent='Leave voice';typed.hidden=!room.localParticipant.sendText;status.textContent=[...room.remoteParticipants.values()].some(p=>p.identity.startsWith('agent'))?'Dealer is at the table. Speak naturally.':'Connected. Waiting for the dealer…';
+}catch(e){if(room)await room.disconnect();room=null;status.textContent='Could not connect: '+e.message;}finally{button.disabled=false;}};
+typed.onsubmit=async e=>{e.preventDefault();const text=input.value.trim();if(!text||!room)return;input.value='';note('You (typed)',text);await room.localParticipant.sendText(text,{topic:'lk.chat'});};
+</script>

@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Blackjack · Armstrong</title><link rel="stylesheet" href="/style.css"><script src="/app.js" defer></script></head>
+<body>
+<header><a class="brand" href="/" aria-label="Blackjack home"><span class="brand-icon">♠</span><span>ARMSTRONG<small>THE CARD TABLE</small></span></a><span class="header-note">A little luck. A steady hand.</span><span class="live"><i></i> LOCAL TABLE</span></header>
+<main>
+<section class="intro"><div><div class="eyebrow">TAKE A SEAT</div><h1>Blackjack<span>.</span></h1><p>Your next card is a possibility.</p></div><div class="mode" aria-label="Table mode"><button id="practice" class="selected">Practice</button><button id="physical">Physical table</button></div></section>
+<div class="layout"><section class="play-area" aria-label="Blackjack table">
+<div class="table"><div class="table-top"><span id="mode-label">PRACTICE TABLE</span><span id="round-label">ROUND —</span></div>
+<div class="hand-area dealer"><div class="hand-label">DEALER <span class="total" id="dealer-total">—</span></div><div id="dealer-cards" class="cards"></div></div>
+<div class="table-center"><div class="arc">BLACKJACK</div><div class="rule">DEALER STANDS ON ALL 17</div><div class="fine-rule">FACE-UP TABLE · NO WAGERS</div></div>
+<div class="hand-area player"><div id="player-cards" class="cards"></div><div class="hand-label">YOUR HAND <span class="total" id="player-total">—</span></div></div>
+<div class="table-bottom"><span>ONE DECK</span><span>♠ <b>♥</b> ♣ <b>♦</b></span><span>PLAY YOUR HAND</span></div></div>
+<div class="action-bar"><div class="turn-copy"><span class="eyebrow" id="turn-label">YOUR TABLE IS READY</span><strong id="message" aria-live="polite">Let’s deal you in.</strong></div><div class="actions"><button id="hit" class="secondary" disabled>Hit <span>＋</span></button><button id="stand" class="secondary" disabled>Stand <span>↗</span></button><button id="deal" class="primary">Deal a hand <span>→</span></button></div></div>
+<section class="draw-view" id="draw-view" hidden><div><div class="eyebrow" id="draw-source">JUST DRAWN</div><h2 id="draw-name"></h2><p id="draw-description"></p></div><div id="card-stage" class="card-stage" aria-label="Three dimensional view of the drawn card"></div></section>
+<div id="error" role="alert" hidden></div>
+<section id="confirmation" class="panel confirmation" hidden><div><div class="eyebrow">CONFIRM THE PHYSICAL CARD</div><h2 id="confirm-title">Add a card</h2><p>Check its rank, suit, and placement before adding it to the table.</p></div><fieldset id="ranks"><legend>Rank</legend></fieldset><fieldset id="suits"><legend>Suit</legend></fieldset><button id="confirm" class="primary">Confirm card →</button><span id="selection-note">Choose a rank and suit</span><div><button class="text-button" id="end-round">End this round</button></div></section>
+</section>
+<aside><section class="panel session"><div class="eyebrow">AT A GLANCE</div><h2>The shoe</h2><div class="count-main"><strong id="running">0</strong><div>Running count<small>Hi-Lo system</small></div></div><div class="stat"><span>True count</span><strong id="true-count">0.0</strong></div><div class="stat"><span>Cards remaining</span><strong id="remaining">52 <small>/ 52</small></strong></div><div class="shoe-track"><div id="shoe-fill"></div></div><p class="muted">2–6 add one. Tens and aces subtract one. A new round keeps the count.</p><button class="text-button" id="shuffle">Start a fresh shoe ↻</button></section>
+<section class="panel robot"><div class="panel-heading"><div class="eyebrow">ARMSTRONG DEALER</div><span id="robot-dot" class="dot"></span></div><h2 id="robot-title">Practice, at your pace.</h2><p id="robot-description">Virtual cards, real decisions. The arms stay at rest in practice mode.</p><div id="robot-details" hidden><div class="stat"><span>Free positions</span><strong id="slots">—</strong></div><div id="task-state" aria-live="polite">No deal requested.</div><button id="robot-deal" class="secondary">Continue robot hand</button><button id="stop" class="stop" hidden>Stop this deal</button><p class="muted">Motion completion does not verify the card. Confirm it on the table.</p></div></section>
+<section class="how"><span>01 / THE HOUSE RULES</span><p>Get closer to 21 than the dealer.<br>Aces count as 1 or 11. All cards are face up. Dealer stands on soft 17.</p><p>Single player · Hit or stand · No split or double</p></section>
+</aside></div>
+<footer><span>ARMSTRONG / BLACKJACK</span><span>Standalone table · Session stored in server memory</span></footer>
+</main></body></html>

@@ -1,0 +1,5 @@
+livekit-agents[silero]==1.8.11
+faster-whisper
+kokoro-onnx
+soundfile
+aiohttp>=3.10,<4
